@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Introduction | Jekyll theme for documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+
+<!-- Page Content -->
+
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> <a href = "index.html" > Home  </a></li>
+  
+  
+  
+      
+  
+  <li>
+      <a href="#">Overview</a>
+      <ul>
+          
+          
+          
+          <li><a href="index.html">Get started</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a href="introduction.html">Context</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="apmc_analysis.html">Analysis</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Introduction</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+    <a target="_blank" href="https://github.com/tomjoht/documentation-theme-jekyll/blob/gh-pages/pages/mydoc/introduction.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+
+    
+
+
+    
+
+  <h2 id="msp-and-procurement-in-india">MSP and Procurement in India</h2>
+
+<p>MSP and Procurement are part of reforms in 60’s along with Green Revolution, as a response to food shortage during the same period. Twin objectives of this setup is to make sure prices for farmers do not go below certain threshold and also food prices for consumers is in check. They also aim to influence the sowing pattern of farmers, so that there is no shortage or excess supply of any one agricultural produce.</p>
+
+<p>CACP (Commission for Agricultural Crops and Prices) declares MSP for around 22 crops every year in corresponding seasons (kharif and rabi). They take into account, mainly, cost of production in agriculture and demand-supply conditions among others to comeup with these numbers. Implementation aspects of MSP and Procurement are responsibility of Central and State level Cooperatives with the help of respective State Government departments of Agriculture.</p>
+
+<p>Important criticism of MSP and Procurement is lack of sufficient number of procurement centres across the country and inefficient distribution and storage of agriculture produce. Also, there has been little awarenesss as low as only 30 percent among farmers about MSP in most states as per recent reports.</p>
+
+<h2 id="bureaucratic-structure-for-implementation">Bureaucratic structure for implementation</h2>
+
+<p>At the top level is  Ministry of Agriculture, Cooperation and Farmers welfare, vested with responsibility of implementation of MSP and Procurement. CACP with assistance from Directorate of Economics and Statistics, both offices attached to Department of Agriculture, carry out plan and execution of MSP mechanism every year for each season.</p>
+
+<p>Once MSP and Procurement guidelines are finalized for each season, many national/regional corporations and cooperatives are involved in procurement and distribution of food grains. Food Corporation of India, National Agricultural Cooperative Marketing Federation of India and few state level cooperatives are prominent among them. They coordinate with state departments of civil supply distribution and state level agriculture departments to actually procure the produce from farmers.</p>
+
+<p>At the regional level, State Governments are responsible for maintaining and formulating rules for APMCs (Agricultural Produce Market Committee). They are spread across the state in each district and Mandal. APMC acts, formulated by respective State Governments, provide guidelines for actual functioning of Markets at ground level and are crucial for succesful implementation of MSP and Procurement.</p>
+
+<h2 id="recent-literature-and-reports">Recent Literature and Reports</h2>
+
+<p>There have been many studies on the efficiency and usefulness of MSP and Procurement since its inception. But it is only since 2000’s that there have been rigorous studies.  This is mainly due to availability of high frequency granular data in Agriculture sector.</p>
+
+<p>Very recent study on MSP is due to Shoumitro Chatterjee and Devesh Kapur <a href="http://www.ncaer.org/events/ipf-2016/IPF-2016-Paper-Chatterjee-Kapur.pdf">link to paper</a>. In this first of the series of papers they are working on in the field of Agriculture, they try to understand the factors contributing to variations in Market prices at Mandi level. They argue that 37 percent of this difference can be attributed to location specific features like density of procurement centres in the region and maintainance of local Mandis.</p>
+
+<p>In 2016, there was an evaluation report <a href="http://niti.gov.in/writereaddata/files/writereaddata/files/document_publication/MSP-report.pdf">link to report</a>under Niti Ayog on the efficacy of MSP on farmers. The committee conducted sample survey across india to evaluate different qualitative aspects on MSP and Procurement. They found that only around 30 percent of farmers are aware of MSP mechanism in some states and stressed on spreading awareness. They also pointed out importance of state level APMC acts for the successful implementation of MSP and Procurement.</p>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+</div>
+
+
+
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+
+</html>

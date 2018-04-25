@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Report on Analysis | Jekyll theme for documentation</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+
+<!-- Page Content -->
+
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> <a href = "index.html" > Home  </a></li>
+  
+  
+  
+      
+  
+  <li>
+      <a href="#">Overview</a>
+      <ul>
+          
+          
+          
+          <li><a href="index.html">Get started</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="introduction.html">Context</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a href="apmc_analysis.html">Analysis</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Report on Analysis</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+    <a target="_blank" href="https://github.com/tomjoht/documentation-theme-jekyll/blob/gh-pages/pages/mydoc/apmc_analysis.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+
+    
+
+
+    
+
+  <h2 id="objective">Objective</h2>
+
+<p>To understand the effect of MSP on market prices of different commodities at Mandi level and aggregate state level. To analyse the variation in Mandis across the state in terms of implementation of MSP and Procurement scheme. We first break down our objectives into specific questions to answer from the data available.</p>
+
+<ul>
+  <li>Which APMC Mandis are experiencing more negative deviations from MSP taking into account all MSP linked agriculture produce over three years?</li>
+  <li>Which APMC and for what commodity there is large price fluctuation in a given season and year ?</li>
+  <li>How are prices of different commodities varying across Mandis in over time ?</li>
+</ul>
+
+<h2 id="methodology">Methodology</h2>
+
+<p>We start with some data sniffing to remove outliers and NAs. Then we saw price fluctuations of every commodity averaged across Mandis to get an idea of <a href="/documentation-theme-jekyll/pages/vis/avg_across_mandis_for_each_commdty.html">trend and seasonality component</a> in the time series. We observed that there is almost constant trend in commodity prices. So simple averaging was used to estimate trend component. Also every time series of APMC-commodity combination was tested for additive and multiplicative seasonality and flagged accordingly. <a href="/documentation-theme-jekyll/pages/vis/avg_resi_across_mandis_for_each_commdty.html">Residuals</a> in each case were estimated.</p>
+
+<p>After preliminary data cleaning, we try to answer questions mentioned above in that order as given below:</p>
+
+<ul>
+  <li>
+    <p><a href="/documentation-theme-jekyll/pages/vis/cdf-dataset.html">MSP deviation CDF</a>: Firstly, we calculate the relative deviation of market price from MSP for every APMC taking all commodities coming under MSP over the span of three years. Then a simple CDF of these observations gives a good understanding of deviation of market prices from MSP.</p>
+  </li>
+  <li>
+    <p>Price fluctuations: We measure fluctuations by range (difference of  max and min) of prices for a particular commodity in a given Mandi. For this we average price ranges over relavant period - season or year.</p>
+  </li>
+  <li>
+    <p><a href="/documentation-theme-jekyll/pages/vis/stddev_across_mandis_for_each_commdty.html">Price Variation</a>: We use standard deviation of prices across mandis in a given month to measure variation. Then we plot this variation over time for all commodities.
+`</p>
+  </li>
+</ul>
+
+<h2 id="results">Results</h2>
+
+<ul>
+  <li>We observe that there is no substantial trend in market prices over years. This might be reason for unrest among farmers in recent years. They are distressed with stagnation of income coupled with increase in input costs and inflation.</li>
+  <li>Another important observation is negative deviation from MSP. We see that for most of the commodities market price has been consistently below MSP in majority of Mandis. This indicates how MSP is not acting as a floor as intended.</li>
+  <li>We find significant price variation across Mandis for many commodities like chillies, turmeric. This indicates how low density of Mandis along with poor connectivity can influence prices for the same commodity in the same state.</li>
+</ul>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+</div>
+
+
+
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+
+</html>
